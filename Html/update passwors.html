@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotstar-Password Updation</title>
+    <link rel="icon" href="/icon/Spotstar Logo.png" type="image/x-icon">
+    <style>
+         *{
+           
+           color: white;
+          
+           background-image: url(/Vedios/mountain.jpg);
+           background-repeat: no-repeat;
+           background-attachment: fixed;
+           background-size: cover;
+          
+       }
+         #top{
+            display:flex;
+            justify-content:flex-end;  
+        }
+       button{
+            color: white;
+            border: 0.1px white solid ;
+            margin-left: 20px;
+            height: 25px;
+            width: 100px;
+            border-radius:25px;
+            box-shadow: 3px 3px 5px white;
+            
+        }
+        button:hover{
+            transform: scale(1.1);
+            transition: 0.5s;
+            cursor: pointer;
+        }
+        table{
+            font-size: 20px;
+        }
+        input{
+            border:0.1px white solid;
+            border-radius: 5px;
+            box-shadow: 3px 3px 5px white;
+        }
+        #border{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            border: none;
+            
+              
+        }
+
+        h1{
+            color: rgb(67, 185, 235);
+        }
+        #border1{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid white;
+            box-shadow: 1px 1px 10px white;
+            border-radius: 20px;
+            padding: 2rem 2rem;  
+        }
+
+        
+    </style>
+
+    <script>
+        //Password Validation
+
+        function Password_update(){
+        var Password=document.getElementById("pass").value
+        var password_flag=false
+        var upper=0
+        var lower=0
+        var num=0
+        var special=0
+        for(var i=0; i<Password.length;i++){
+            if((Password[i]>="A")&&(Password[i]<="Z")){
+                upper++
+            }else if ((Password[i]>="a")&&(Password[i]<="z")){
+                lower++
+            }else if ((Password[i]>="0")&&(Password[i]<="9")){
+                num++
+            }else{
+                special++
+            }
+        }
+        if((Password.length>=8)&&(Password.length<=16)&&(upper>=1)&(lower>=1)&&(num>=1)&&(special>=1)){
+            password_flag=true
+        }else{
+            document.getElementById("passerror").innerHTML="Not a Strong Password"
+            document.getElementById("passerror").style.color="red"
+        }
+
+        // Confirm Password
+        var Confirm=document.getElementById("confirm").value
+        var confirm_flag=false
+        if(Password==Confirm){
+            window.location.href="./passwordupdate.html"
+        }else{
+            document.getElementById("confirmerror").innerHTML="Password does not match"
+            document.getElementById("confirmerror").style.color="red"
+        }
+    }
+    </script>
+</head>
+<body>
+    <div id="top">
+        <!-- <div><a href=""><h3><button>Home</h3></button></a></div> -->
+        <div><a href="/index.html"><h3><button>Exit</h3></button></a></div>
+        <div><a href="./contact.html"><h3><button>Contact</button></h3></a></div>
+    </div>
+    <br><br><br>
+
+<div id="border">
+    <div id="border1">
+            <h1>Spotstar-Update Password </h1><br><br>
+    <table>
+        <tr>
+            <td>Enter New Password</td>
+            <td></td>
+            <td><input type="password" id="pass"></td>
+            
+        </tr>
+        <tr>
+            <td>Confirm New Password</td>
+            <td></td>
+            <td><input type="password" id="confirm"></td>
+            
+        </tr>
+    </table>
+    <div id="notify">
+        <p id="passerror"></p>
+        <p id="confirmerror"></p>
+    </div><br><br><br>
+    <button onclick="Password_update()">Update</button>
+</div>
+</div>
+
+
+<!-- <script src="/js/passwordupdate.js"></script> -->
+</body>
+</html>

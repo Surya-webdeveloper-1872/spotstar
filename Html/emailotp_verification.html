@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email_Verification</title>
+    <link rel="icon" href="/icon/Spotstar Logo.png" type="image/x-icon">
+    <style>
+        body{
+           
+            background-image: url(/Vedios/mountain.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            color:white;
+        }
+        #top{
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 1rem;
+            
+        }
+        button{
+            color: black;
+            border: 0.1px black solid ;
+            margin-left: 30px;
+            height: 25px;
+            width: 100px;
+            border-radius:25px;
+            box-shadow: 3px 3px 4px white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;            
+        }
+        a{
+            text-decoration: none;
+        }
+        
+        button:hover{
+            transform: scale(1.1);
+            transition: 0.5s;
+            cursor: pointer;
+            
+           
+        }
+        
+        #border1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 3rem 2rem;
+        }
+
+        #frame{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+       
+        #border{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 350px;
+            width: 500px;
+            margin-top: 70px;
+            box-shadow: 1px 1px 10px white;
+            /* text-shadow: 2px 2px 4px white ; */
+            border: none;
+            border-radius: 20px;  
+              
+        }
+        h1{
+            color: rgb(67, 185, 235);
+        }
+    </style>
+
+    <script>
+
+        var generated_otp;
+        function GenerateOTP(){
+            generated_otp=Math.floor(Math.random()*999999)
+            alert(generated_otp)
+        }
+
+        function OTPVerification(){
+            var user_otp=document.getElementById("otp").value;
+            if(generated_otp==user_otp){
+                window.location.href="./update passwors.html"
+            }else{
+                document.getElementById("error").innerHTML="Incorrect OTP"
+                document.getElementById("error").style.color="red"
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <div id="top">
+        <a href="../index.html"><h3><button>Login</button></h3></a>
+        <a href="./contact.html"><h3><button>Contact</button></h3></a>
+    </div>
+<div id="border1">
+<div id="border">
+    <h1>Spotstar - OTP verification </h1><br>
+
+    <button onclick="GenerateOTP()">Send OTP</button>
+    
+    <div id="frame">
+            <h2>Enter OTP <input type="number" style="margin-left: 20px;" id="otp"></h2><br>
+            <p id="error"></p>
+    <div><button onclick="OTPVerification()">Verify</button></div><br>
+    <div><button onclick="GenerateOTP()">Resend OTP</button></div>
+    </div>
+ </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+*{
+    color: white;
+    margin-right: 10px;
+    background-image: url(/Vedios/mountain.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotstar-VedioHome</title>
+    <link rel="icon" href="/icon/Spotstar Logo.png" type="image/x-icon">
+
+<style>
+    *{
+           
+           color: rgb(253, 253, 253);
+           background-image: url(/Vedios/mountain.jpg);
+           background-repeat: no-repeat;
+           background-attachment: fixed;
+           background-size: cover;
+          
+       }
+
+       #option{
+        width:250px;
+        height: 30px;
+        border-radius: 20px;
+        background-color: black;
+        margin-top: 30px;
+        box-shadow: 1px 2px 20px white;
+        border: 0.1px solid white;
+       
+       }
+       #language{
+        border: 0.1px white solid;
+        height:420px ;
+        width:400px ;
+        box-shadow: 1px 1px 20px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        margin-top: 60px;
+        flex-direction:column;
+        
+       
+       }
+
+       #language:hover{
+        cursor: pointer;
+       }
+       button{
+            box-shadow: 3px 3px 5px white;
+            border-radius: 20px;
+            cursor: pointer;
+            width: 70px;
+            height: 25px;
+        }
+        button:hover{
+            transform:scale(1.1) ;
+            transition: 0.5s;
+        }
+
+        #tamil{
+            border: 0.1px rgb(137, 214, 238) solid;
+            height: 60px;
+            width: 200px;
+            padding-top: 20px;
+            box-shadow: 1px 1px 10px white;
+            border-radius: 25px;
+            text-align: center;
+            margin-top: 12px;
+            
+        }
+        #tamil:hover{
+            transform: scale(1.1);
+            transition: 0.5s;
+        }
+        #english{
+            border: 0.1px rgb(137, 214, 238) solid;
+            height: 60px;
+            width: 200px;
+            padding-top: 20px;
+            box-shadow:1px 1px 10px white;
+            border-radius: 25px;
+            text-align: center;
+           
+        }
+        #english:hover{
+            transform: scale(1.1);
+            transition: 0.5s;
+        }
+        #malayalam{
+            border: 0.1px rgb(137, 214, 238) solid;
+            height: 60px;
+            width: 200px;
+            padding-top: 20px;
+            box-shadow: 1px 1px 10px white;
+            border-radius: 25px;
+            text-align: center;
+        }
+        #malayalam:hover{
+            transform: scale(1.1);
+            transition: 0.5s;
+        }
+        #hindhi{
+            border: 0.5px rgb(137, 214, 238) solid;
+            height: 60px;
+            width: 200px;
+            padding-top: 20px;
+            box-shadow: 1px 1px 10px white;
+            border-radius: 25px;
+            text-align: center;
+        }
+        #hindhi:hover{
+            transform: scale(1.1);
+            transition: 0.5s;
+        }
+    #main1{
+        display: flex;
+        justify-content: flex-end;
+        
+        flex-wrap: wrap;
+    }
+    #top{
+        display: flex;
+        gap: 4rem;
+        margin-left: 4rem;
+    }
+    #main2{
+        display: flex;
+        
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+   
+       
+
+</style>
+<script src="/js/select_language.js"></script>
+</head>
+<body>
+<div id='main2'>
+
+<div><h1>Spotstar-Movies</h1></div>
+<div id="main1">
+    <div id="top">
+        <div><a href="/Html/home.html"><h3><button>Home</h3></button></a></div>
+        <div><a href="/index.html"><h3><button>Log Out</h3></button></a></div>
+        <div><a href="/Html/contact.html"><h3><button>Contact</button></h3></a></div>
+    </div>
+</div>
+</div>
+<center>
+    <select id="option">
+        <option value="100">Search</option>
+        <option value="101">1.Tamil</option>
+        <option value="102">2.English</option>
+        <option value="103">3.Malayalam</option>
+        <option value="104">4.Hindi</option>
+    </select>
+    <button onclick="Select()">GO</button>
+    <div id="language">
+    <center>
+        <a href="/Html/Vedio files/tamilmovies.html" ><div id="tamil"> TAMIL</div></a> <br>
+        <a href="/Html/Vedio files/englishmovies.html" ><div id="english"> ENGLISH</div> </a><br>
+        <a href="/Html/Vedio files/malayalammovies.html" ><div id="malayalam"> MALAYALAM</div></a> <br>
+        <a href="/Html/Vedio files/hindhimovies.html" ><div id="hindhi"> HINDI</div></a>
+    </center>
+    </div><br><br>
+    <a href="/Html/home.html"><button>Back</button></a>
+</center>
+
+</body>
+</html>

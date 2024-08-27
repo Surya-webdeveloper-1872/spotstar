@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification</title>
+    <link rel="icon" href="/icon/Spotstar Logo.png" type="image/x-icon">
+    <style>
+    body{
+           
+        background-image: url(/Vedios/mountain.jpg);
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+         background-size: cover;
+         color:white;
+         text-align: center;
+        
+     }
+     button{
+            color:black;
+            border: 0.1px black solid ;
+            height: 25px;
+            width: 100px;
+            border-radius:25px;
+            box-shadow: 3px 3px 5px white;
+           
+        }
+        
+        button:hover{
+            transform: scale(1.1);
+            transition: 0.5s;
+            cursor: pointer;
+           
+        }
+        input{
+            text-align: center;
+            width: 250px;
+            height: 30px;
+            margin-left: 25px;
+            border-radius:25px;
+        }
+        #top{
+            display:flex;
+            justify-content:flex-end;
+            gap: 1rem;  
+        }
+        #border1{
+            display: flex;
+            justify-content: center;
+            
+        }
+        #border{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            height: 500px;
+            width:450px;
+            box-shadow: 1px 1px 10px white;
+            margin: 4rem 0rem;
+            /* text-shadow: 2px 2px 4px white ; */
+            border: none;
+            border-radius: 20px;  
+              
+        }
+        h1{
+            color: rgb(67, 185, 235);
+        }  
+    </style>
+
+    <script>
+
+        var generated_otp;
+        function GenerateOTP(){
+            generated_otp=Math.floor(Math.random()*999999)
+            alert(generated_otp)
+        }
+
+        function OTPVerification(){
+            var user_otp=document.getElementById("otp").value;
+            if(generated_otp==user_otp){
+                window.location.href="./Registered success.html"
+            }else{
+                document.getElementById("error").innerHTML="Incorrect OTP"
+                document.getElementById("error").style.color="red"
+            }
+        }
+
+    </script>
+</head>
+<body>
+<div id="top">
+        <div><a href="./home.html"><h3><button>Home</h3></button></a></div>
+        <div><a href="/index.html"><h3><button>Log Out</h3></button></a></div>
+        <div><a href="./contact.html"><h3><button>Contact</button></h3></a></div>
+</div>
+<div id="border1">
+<div id="border">
+    <h1>Spotstar- OTP Verification <br>
+    <button onclick="GenerateOTP()">Send OTP</button></h1>
+   <br><br>
+   
+        
+            <h2>OTP  - <input type="number" placeholder="Enter OTP" id="otp"></h2>
+            
+            <br>
+            <p id="error"></p>
+            <br>
+        <button onclick="OTPVerification()">Verify</button><br><br>
+        <a href=""><button onclick="GenerateOTP()">Resend OTP</button></a>
+</div>
+</div>
+
+    <!-- <script src="/js/Registered.js"></script> -->
+    
+</body>
+</html>

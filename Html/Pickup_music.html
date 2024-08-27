@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotstar-Music</title>
+    <link rel="icon" href="/icon/Spotstar Logo.png" type="image/x-icon">
+    <style>
+        *{
+           
+            color: white;
+            background-image: url(/Vedios/mountain.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        
+        h2{
+            text-decoration: underline;
+            color: rgb(67, 185, 235);
+        }
+        h3{
+            text-decoration: underline;
+            color: rgb(67, 185, 235);
+        }
+        
+        select{
+            height:40px ;
+            width: 300px;
+        }
+        
+       button{
+            color: white;
+            border: 0.1px white solid ;
+            height: 25px;
+            width: 100px;
+            border-radius:25px;
+            box-shadow: 3px 3px 5px white;
+            
+        }
+        button:hover{
+            transform: scale(1.1);
+            transition: 0.5s;
+            cursor: pointer;
+        }
+        h1{
+            color: rgb(67, 185, 235);
+        }
+        input{
+            cursor: pointer;
+        }
+       .main1{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content:space-between;
+       }
+       #main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.0rem;
+       }
+       #top{
+        display: flex;
+        gap: 2rem;
+        padding-left: 2rem;
+       }
+       #frame{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size:large;
+        border: none;  
+        text-align: center;
+    }
+    .frame1{
+        margin-top: 3rem;
+        border: 0.1px white solid ;
+        box-shadow: 1px 1px 10px white;
+        border-radius: 20px;
+        padding-bottom: 2rem;
+    }
+    #click{
+        display: flex;
+        justify-content: center;
+    }
+       
+        
+    </style>
+</head>
+<body>
+<div class="main1">
+    <div id="main">
+        <div><h1>Spotstar-Music</h1></div>
+        <div>
+        <select style="border-radius: 10px;background-color: black;">
+            <option value="">Search</option>
+            <option value="">1.Aniruth Playlist</option>
+            <option value="">2.Hiphop Playlist</option>
+            <option value="">3.Unit Narayanan Playlist</option>
+            <option value="">4.Jayaselan Playlist</option>
+            <option value="">5.Illayaraja playlist</option>
+        </select>
+        </div>
+    </div>
+    <div id="top">
+        <div><a href="./home.html"><h3><button>Home</h3></button></a></div>
+        <div><a href="/index.html"><h3><button>Log Out</h3></button></a></div>
+        <div><a href="./contact.html"><h3><button>Contact</button></h3></a></div>
+    </div>
+</div>
+<div id="frame">
+<div class="frame1">
+    <h2>Pickup Your Choices???</h2>
+   
+    <h3>Languages</h3>
+    <div>
+    <table>
+        <tr>
+            <td><input type="checkbox">Tamil</td>
+            <td><input type="checkbox">Engish</td>
+            <td><input type="checkbox">Malayalam</td>
+            <td><input type="checkbox">Hindhi</td>
+            <td><input type="checkbox">Telugu</td>
+        </tr>
+    </table>
+    </div>
+    <div>
+    <h3>Popular Artist</h3>
+    <table>
+        <tr>
+            <td><input type="checkbox">Anirudth</td>
+            <td><input type="checkbox">Hiphop Tamilan</td>
+            <td><input type="checkbox">Unit Narayanan</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox">illayaraja</td>
+            <td><input type="checkbox">DSP</td>
+            <td><input type="checkbox">Vijay antony</td>
+        </tr>
+    </table>
+    </div>
+    <div>
+    <h3>Vintage</h3>
+    <table>
+        <tr>
+            <td><input type="checkbox">60's</td>
+            <td><input type="checkbox">70's</td>
+            <td><input type="checkbox">80's</td>
+            <td><input type="checkbox">90's</td>
+            <td><input type="checkbox">20's</td>
+            <td><input type="checkbox">21'st</td>
+            <td><input type="checkbox">22'nd</td> 
+        </tr>
+    </table>
+    </div>
+    <div>
+    <h3>Journer</h3>
+    <table>
+        <tr>
+            <td><input type="checkbox">Classical</td>
+            <td><input type="checkbox">Popular</td>
+            <td><input type="checkbox">Reginal</td>
+            <td><input type="checkbox">Religious</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox">Traditional Folk</td>
+            <td><input type="checkbox">Others</td>
+        </tr>
+    </table>
+    </div>
+</div>
+</div><br>
+<div id="click">
+<a href="../Html/Audio files/Audiohomepage.html"><button>Done</button></a><br><br>
+</div>
+
+
+</body>
+</html>

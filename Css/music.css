@@ -1,0 +1,43 @@
+*{
+    background-color: rgb(11, 11, 11);
+    color: aliceblue;
+
+   
+  
+}
+
+.hot{
+  width: 700px;
+  height: 700px;
+  text-align: center;
+}
+p{
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: larger;
+}
+input{
+    border-radius: 10px;
+    border-color: aliceblue;   
+}
+input:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+th{
+    color: rgb(52, 144, 158);
+    font-size: larger;
+}
+
+
+#hot1{
+    display: flex;
+    justify-content: center;
+
+}
+fieldset{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
