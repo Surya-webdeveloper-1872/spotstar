@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotstar</title>
+    <link rel="icon" href="./icon/Spotstar Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            background-color:black;
+            color: aliceblue;
+           
+        }
+     
+        input{
+            border-radius: 20px ; 
+            border: 1px white  solid ;
+            height: 30px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 3px 3px 5px white;
+        }
+        input:hover{
+            transform: scale(1.1);
+            transition: 0.5s;
+        } 
+        #border{
+            
+            height: 650px;
+            width: 450px;
+            padding-top: 9rem;
+            box-shadow: 1px 1px 10px white;
+            /* text-shadow: 2px 2px 4px white ; */
+            border: none;
+            border-radius: 20px;   
+            display: flex; 
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; 
+        }
+        button{
+            background-color: lightgreen;
+            color: black;
+            height:30px ;
+            width:100px ;
+            border-radius: 20px;
+            cursor: pointer;
+            box-shadow: 3px 3px 5px white;
+            font-weight: 20px;
+        }
+        button:hover{
+            transform: scale(1.1);
+            transition: 0.5s;
+        }
+        #main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+           
+        }
+        p{
+            text-align: center;
+        }
+
+        
+             
+    </style>
+
+    <script>
+        function LoginValidation(){
+            var db={"suryaeceengineer2024@gmail.com":"Surya@2024","thebestfighter1872@gmail.com":"Surya@2024","suryapcet1872@gmail.com":"Surya@2024"}
+            var username=document.getElementById("user").value;
+            var password=document.getElementById("pass").value;
+            var login=Object.keys(db)
+            var flag=false
+            for (var i=0;i<login.length;i++){
+                if(username==login[i]){
+                    if(password==db[username]){
+                        flag=true
+                    }
+                }
+            }
+            if(flag==true){
+                window.location.href="../Html/home.html"
+            }else{
+                document.getElementById("error").innerHTML="Invalid Username or Incorrect Password"
+                document.getElementById("error").style.color="red"
+            }
+        }
+    </script>
+</head>
+<body>
+
+ <div id="main">
+    <h1>Log in to Spotstar</h1><br>
+
+<div id="border1">
+<div id="border" >
+    <a href="https:www.google.com"><input placeholder="Countinue with Google";></i></a> <br><br>
+    <a href=""><input placeholder="Continue with Facebook";><br><br></a>
+    <a href=""><input placeholder="Continue with Apple "><br><br></a>
+    <a href=""><input placeholder="Continue with phone number"; ><br></a>
+
+    <p>_______________________________________</p>
+
+    <p > Email or Username <br><input  type="text" id="user"></p>
+    <p>Password <br><input type="password" id="pass">
+    </p><br>
+    <p id="error"></p>
+    <br>
+    <button onclick="LoginValidation()">Login</button></a><br>
+
+    <a href="./Html/forget password.html"><p><u>Forgot your password?</u></p></a><br>
+    <p>_______________________________________</p>
+
+
+    <p>Don't have an account?<a href="./Html/signup.html"><u> Sign up for Spotstar</u></a></p><br><br>
+    <p>This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.</p>
+</div>
+</div>
+</div> 
+
+</body>
+</html>
